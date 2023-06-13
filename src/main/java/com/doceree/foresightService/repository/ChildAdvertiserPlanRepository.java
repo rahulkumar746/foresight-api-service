@@ -52,7 +52,7 @@ public class ChildAdvertiserPlanRepository {
                         .set("created_by", childAdvertiserPlan.getCreatedBy())
                         .set("updated_by", childAdvertiserPlan.getUpdatedBy())
                         .set("platform_type", childAdvertiserPlan.getPlatformType().toArray(new String[childAdvertiserPlan.getPlatformType().size()]))
-                        .set("target_type", childAdvertiserPlan.getTargetType().toArray(new String[childAdvertiserPlan.getTargetType().size()]))
+                        .set("target_type", childAdvertiserPlan.getTargetType() != null ? childAdvertiserPlan.getTargetType().toArray(new String[childAdvertiserPlan.getTargetType().size()]) : null)
                         .set("network_type", childAdvertiserPlan.getNetworkType().toArray(new String[childAdvertiserPlan.getNetworkType().size()]))
                         .set("ui_request_json", childAdvertiserPlan.getUiRequestJson()),
                 ChildAdvertiserPlan.class
